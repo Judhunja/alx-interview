@@ -18,6 +18,8 @@ def validUTF8(data: List[int]) -> bool:
                 num_next = 2
             elif byte >> 3 == 0b11110:  # four byte character
                 num_next = 3
+            else:
+                return False
         else:
             if byte >> 6 != 0b10:
                 return False  # not a continuation byte
