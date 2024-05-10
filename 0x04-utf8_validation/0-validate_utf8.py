@@ -7,6 +7,10 @@ from typing import List
 def validUTF8(data: List[int]) -> bool:
     """Checks whether a data set represents a valid
     utf-8 encoding"""
+    for byte in data:
+        if not (0 <= byte <= 255):  # range check
+            return False
+
     num_next = 0
     for byte in data:
         if num_next == 0:
