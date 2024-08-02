@@ -13,7 +13,7 @@ def island_perimeter(grid):
         it reaches out of bounds where it returns 1 """
         if (
             i >= len(grid) or j >= len(grid[0])
-            or i < 0 or j < 0 or grid[i][j] == 0
+            or (i < 0) or (j < 0) or (grid[i][j] == 0)
         ):
             return 1
         if (i, j) in visited:
