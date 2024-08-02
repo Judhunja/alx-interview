@@ -4,6 +4,8 @@
 
 def island_perimeter(grid):
     """ Calculates the perimeter of the connected islands """
+    if grid is None:
+        return None
     visited = set()
 
     def search(i, j):
