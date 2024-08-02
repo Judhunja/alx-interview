@@ -25,3 +25,4 @@ def island_perimeter(grid):
         for j in range(len(grid[0])):
             if grid[i][j] == 1:
                 return search(i, j)
+    return None
