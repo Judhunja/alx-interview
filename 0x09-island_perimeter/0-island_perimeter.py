@@ -11,8 +11,10 @@ def island_perimeter(grid):
     def search(i, j):
         """ Recursively goes through each cell of land until
         it reaches out of bounds where it returns 1 """
-        if (i >= len(grid) or j >= len(grid[0])
-           or i < 0 or j < 0 or grid[i][j] == 0):
+        if (
+            i >= len(grid) or j >= len(grid[0])
+            or i < 0 or j < 0 or grid[i][j] == 0
+        ):
             return 1
         if (i, j) in visited:
             return 0
@@ -27,4 +29,4 @@ def island_perimeter(grid):
         for j in range(len(grid[0])):
             if grid[i][j] == 1:
                 return search(i, j)
-    return None
+    return 0
